@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/CSS/styles.css">
+    <title>Order</title>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row flex-nowrap">
+        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                    <span class="fs-5 d-none d-sm-inline">Menu</span>
+                </a>
+                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                    <li class="nav-item">
+                        <a href="/index.html" class="nav-link align-middle px-0">
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/HTML/about.html" class="nav-link align-middle px-0">
+                          <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">About</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                          <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Sales</span> </a>
+                          <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
+                          <li class="w-100">
+                              <a href="/HTML/products.html" class="nav-link px-0"> 
+                                <span class="d-none d-sm-inline">Products</span>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="/HTML/order.html" class="nav-link px-0"> 
+                                <span class="d-none d-sm-inline">Order</span>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="/HTML/checkout.html" class="nav-link px-0"> 
+                                <span class="d-none d-sm-inline">Checkout</span>
+                              </a>
+                          </li>
+                      </ul>
+                  </li>
+                    <li>
+                        <a href="/HTML/contact.html" class="nav-link px-0 align-middle">
+                            <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Contact Us</span>
+                        </a>
+                    </li>
+                </ul>
+                <hr>
+                
+            </div>
+        </div>
+        <div class="col py-3">
+          <main class="productsPage">
+            <div class="containerProducts container">
+              <h2 class="text-center">OUR PRODUCTS:</h2>
+              <div class="row mb-4">
+                <div class="col-md-8">
+                  <a href="/HTML/checkout.html"><button id="checkoutBnt">Checkout <span class="itemCount">0</span></button></a>
+                </div>
+                <div class="col-md-4 d-flex justify-content-end">
+                  <input type="text" class="form-control me-2 searchInput" placeholder="Search">
+                  <button class="btn  me-2 searchBnt">Search</button>
+                  <button id="sortButton" class="btn btn-secondary">Sort</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 mb-4">
+                  <div class="card">
+                    <img src="https://mahmud-isaacs.github.io/ecomHostedImages/manUnited.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">MANCHESTER UNITED 1998 HOME RETRO KIT</h5>
+                      <h3 class="priceTag">R1200</h3>
+                      <p class="card-text">This is the Manchester United Home kit for the 1998-99 Season where they won the Premier League.</p>
+                      <button class="btn btn-dark addToCart" data-id="1">Add To Cart</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="card">
+                    <img src="https://mahmud-isaacs.github.io/ecomHostedImages/realMadrid.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">1996/1997 REAL MADRID RETRO JERSEY</h5>
+                      <h3 class="priceTag">R2000</h3>
+                      <p class="card-text">Special Real Madrid shirt that was released after Madrid won the La Liga season 1996-1997. It was the 66th time Madrid won this Spanish domestic top-tier league.The players faces are present within the material of the shirt. Players like Clarence Seedorf, Davor Šuker, Predrag Mijatović, Raúl.</p>
+                      <button class="btn btn-dark addToCart" data-id="2">Add To Cart</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="card">
+                    <img src="https://mahmud-isaacs.github.io/ecomHostedImages/spurs.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">TOTTENHAM HOTSPUR 1994 RETRO JERSEY</h5>
+                      <h3 class="priceTag">R600</h3>
+                      <p class="card-text">Worn in a season where Spurs would finish 7th in the league under Gerry Francis</p>
+                      <button class="btn btn-dark addToCart" data-id="3">Add To Cart</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="card">
+                    <img src="https://mahmud-isaacs.github.io/ecomHostedImages/manCity.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">MANCHESTER CITY HOME 1997 99 RETRO JERSEY</h5>
+                      <h3 class="priceTag">R1100</h3>
+                      <p class="card-text">The home shirt for the season was a slightly darker shade of blue than the traditional City sky blue known as ‘Laser Blue’. While the home shirt was generally well received, it was the away kit that would take on a special significance to Manchester City fans. </p>
+                      <button class="btn btn-dark addToCart" data-id="4">Add To Cart</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="card">
+                    <img src="https://mahmud-isaacs.github.io/ecomHostedImages/aresnal.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">ARSENAL 2002-23 HOME KIT RETRO JERSEY</h5>
+                      <h3 class="priceTag">R900</h3>
+                      <p class="card-text">Worn by the likes of Thierry Henry, Dennis Bergkamp, Ashley Cole, Patrick Vieira, Sol Campbell and Giovanni van Bronckhorst.</p>
+                      <button class="btn btn-dark addToCart" data-id="5">Add To Cart</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="card">
+                    <img src="https://mahmud-isaacs.github.io/ecomHostedImages/barce.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">FC BARCELONA HOME 2010 11 RETRO JERSEY</h5>
+                      <h3 class="priceTag">R850</h3>
+                      <p class="card-text">FC Barcelona 2010/2011 Barca Retro Jersey. Worn by the likes of Lionel Messi.</p>
+                      <button class="btn btn-dark addToCart" data-id="6">Add To Cart</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="card">
+                    <img src="https://mahmud-isaacs.github.io/ecomHostedImages/chelsea.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">CHELSEA AWAY 2003-04 RETRO JERSEY</h5>
+                      <h3 class="priceTag">R1250</h3>
+                      <p class="card-text">Famous away shirt featuring Juan Sebastian Veron's name-set in official Lextra felt. The Argentine was one of the most lucractive players in the world at the time of his transfer to Chelsea, but his career in West London was marred by injuries.</p>
+                      <button class="btn btn-dark addToCart" data-id="7">Add To Cart</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="card">
+                    <img src="https://mahmud-isaacs.github.io/ecomHostedImages/images%20(1).jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">ENGLAND 1990 RETRO JERSEY</h5>
+                      <h3 class="priceTag">R1300</h3>
+                      <p class="card-text">Englands alternative football shirt for the Italia 90 World Cup.This was the first blue shirt used since 1970 World Cup.Used against Turkey in a European Qualifying game winning 1-0, Dennis Wise scored his one and only international goal.</p>
+                      <button class="btn btn-dark addToCart" data-id="8">Add To Cart</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="card">
+                    <img src="https://mahmud-isaacs.github.io/ecomHostedImages/SA.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">1998 SOUTH AFRICA HOME RETRO JERSEY</h5>
+                      <h3 class="priceTag">R700</h3>
+                      <p class="card-text">Step into a time machine and immerse yourself in the rich history of South African football with our 1998 South Africa Home Retro Kit. This meticulously crafted kit is a faithful reproduction of the iconic jersey worn during that momentous year.</p>
+                      <button class="btn btn-dark addToCart" data-id="9">Add To Cart</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>    
+        </div>
+    </div>
+</div>
+
+      <footer> 
+        <div class="footer-content">
+            <h6> &copy;<b>RETRO KITZ</b>|2024| All rights reserved</h6>
+         </div>
+         <div class="socialLinks">
+            <a href=""><img class="instaLogo" src="https://mahmud-isaacs.github.io/ecomHostedImages/inta.png" alt=""></a>
+            <a href=""><img class="twitterLogo" src="https://mahmud-isaacs.github.io/ecomHostedImages/twitter.jpg" alt=""></a>
+         </div>
+      </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/SCRIPT/order.js"></script>
+</body>
+</html>
