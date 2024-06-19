@@ -60,117 +60,19 @@
         <div class="col py-3">
           <main class="productsPage">
             <div class="containerProducts container">
-              <h2 class="text-center">OUR PRODUCTS:</h2>
+              <h2 class="text-center">Order:</h2>
               <div class="row mb-4">
                 <div class="col-md-8">
-                  <a href="/HTML/checkout.html"><button id="checkoutBnt">Checkout <span class="itemCount">0</span></button></a>
+                  <a href="/HTML/checkout.html"><button id="checkoutBnt">Cart: <span class="itemCount">0</span> items</button></a>
                 </div>
                 <div class="col-md-4 d-flex justify-content-end">
-                  <input type="text" class="form-control me-2 searchInput" placeholder="Search">
-                  <button class="btn  me-2 searchBnt">Search</button>
+                  <input id="searchInput" type="text" class="form-control me-2" placeholder="Search">
+                  <button id="searchBnt" class="btn me-2">Search</button>
                   <button id="sortButton" class="btn btn-secondary">Sort</button>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-md-4 mb-4">
-                  <div class="card">
-                    <img src="https://mahmud-isaacs.github.io/ecomHostedImages/manUnited.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">MANCHESTER UNITED 1998 HOME RETRO KIT</h5>
-                      <h3 class="priceTag">R1200</h3>
-                      <p class="card-text">This is the Manchester United Home kit for the 1998-99 Season where they won the Premier League.</p>
-                      <button class="btn btn-dark addToCart" data-id="1">Add To Cart</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                  <div class="card">
-                    <img src="https://mahmud-isaacs.github.io/ecomHostedImages/realMadrid.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">1996/1997 REAL MADRID RETRO JERSEY</h5>
-                      <h3 class="priceTag">R2000</h3>
-                      <p class="card-text">Special Real Madrid shirt that was released after Madrid won the La Liga season 1996-1997. It was the 66th time Madrid won this Spanish domestic top-tier league.The players faces are present within the material of the shirt. Players like Clarence Seedorf, Davor Šuker, Predrag Mijatović, Raúl.</p>
-                      <button class="btn btn-dark addToCart" data-id="2">Add To Cart</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                  <div class="card">
-                    <img src="https://mahmud-isaacs.github.io/ecomHostedImages/spurs.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">TOTTENHAM HOTSPUR 1994 RETRO JERSEY</h5>
-                      <h3 class="priceTag">R600</h3>
-                      <p class="card-text">Worn in a season where Spurs would finish 7th in the league under Gerry Francis</p>
-                      <button class="btn btn-dark addToCart" data-id="3">Add To Cart</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                  <div class="card">
-                    <img src="https://mahmud-isaacs.github.io/ecomHostedImages/manCity.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">MANCHESTER CITY HOME 1997 99 RETRO JERSEY</h5>
-                      <h3 class="priceTag">R1100</h3>
-                      <p class="card-text">The home shirt for the season was a slightly darker shade of blue than the traditional City sky blue known as ‘Laser Blue’. While the home shirt was generally well received, it was the away kit that would take on a special significance to Manchester City fans. </p>
-                      <button class="btn btn-dark addToCart" data-id="4">Add To Cart</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                  <div class="card">
-                    <img src="https://mahmud-isaacs.github.io/ecomHostedImages/aresnal.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">ARSENAL 2002-23 HOME KIT RETRO JERSEY</h5>
-                      <h3 class="priceTag">R900</h3>
-                      <p class="card-text">Worn by the likes of Thierry Henry, Dennis Bergkamp, Ashley Cole, Patrick Vieira, Sol Campbell and Giovanni van Bronckhorst.</p>
-                      <button class="btn btn-dark addToCart" data-id="5">Add To Cart</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                  <div class="card">
-                    <img src="https://mahmud-isaacs.github.io/ecomHostedImages/barce.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">FC BARCELONA HOME 2010 11 RETRO JERSEY</h5>
-                      <h3 class="priceTag">R850</h3>
-                      <p class="card-text">FC Barcelona 2010/2011 Barca Retro Jersey. Worn by the likes of Lionel Messi.</p>
-                      <button class="btn btn-dark addToCart" data-id="6">Add To Cart</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                  <div class="card">
-                    <img src="https://mahmud-isaacs.github.io/ecomHostedImages/chelsea.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">CHELSEA AWAY 2003-04 RETRO JERSEY</h5>
-                      <h3 class="priceTag">R1250</h3>
-                      <p class="card-text">Famous away shirt featuring Juan Sebastian Veron's name-set in official Lextra felt. The Argentine was one of the most lucractive players in the world at the time of his transfer to Chelsea, but his career in West London was marred by injuries.</p>
-                      <button class="btn btn-dark addToCart" data-id="7">Add To Cart</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                  <div class="card">
-                    <img src="https://mahmud-isaacs.github.io/ecomHostedImages/images%20(1).jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">ENGLAND 1990 RETRO JERSEY</h5>
-                      <h3 class="priceTag">R1300</h3>
-                      <p class="card-text">Englands alternative football shirt for the Italia 90 World Cup.This was the first blue shirt used since 1970 World Cup.Used against Turkey in a European Qualifying game winning 1-0, Dennis Wise scored his one and only international goal.</p>
-                      <button class="btn btn-dark addToCart" data-id="8">Add To Cart</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                  <div class="card">
-                    <img src="https://mahmud-isaacs.github.io/ecomHostedImages/SA.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">1998 SOUTH AFRICA HOME RETRO JERSEY</h5>
-                      <h3 class="priceTag">R700</h3>
-                      <p class="card-text">Step into a time machine and immerse yourself in the rich history of South African football with our 1998 South Africa Home Retro Kit. This meticulously crafted kit is a faithful reproduction of the iconic jersey worn during that momentous year.</p>
-                      <button class="btn btn-dark addToCart" data-id="9">Add To Cart</button>
-                    </div>
-                  </div>
-                </div>
+              <div id="productContainer" class="row">
+                
               </div>
             </div>
           </main>    
