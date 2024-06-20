@@ -67,13 +67,20 @@
                 </div>
                 <div class="col-md-4 d-flex justify-content-end">
                   <input id="searchInput" type="text" class="form-control me-2" placeholder="Search">
-                  <button id="searchBnt" class="btn me-2">Search</button>
-                  <button id="sortButton" class="btn btn-secondary">Sort</button>
+                  <select id="categorySelect" class="form-control">
+                    <option value="">All Categories</option>
+                  </select>
+                  <select id="sortPriceSelect" class="form-control">
+                    <option value="">Sort by Price</option>
+                    <option value="asc">Price: Low to High</option>
+                    <option value="desc">Price: High to Low</option>
+                  </select>
                 </div>
               </div>
-              <div id="productContainer" class="row">
-                
-              </div>
+            </div>
+            <div id="productContainer" class="row">
+              
+            </div>
             </div>
           </main>    
         </div>
@@ -82,7 +89,7 @@
 
       <footer> 
         <div class="footer-content">
-            <h6> &copy;<b>RETRO KITZ</b>|2024| All rights reserved</h6>
+            <h6> &copy;<b>SNEE.CO</b>|2024| All rights reserved</h6>
          </div>
          <div class="socialLinks">
             <a href=""><img class="instaLogo" src="https://mahmud-isaacs.github.io/ecomHostedImages/inta.png" alt=""></a>
