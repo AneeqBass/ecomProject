@@ -36,7 +36,7 @@ function displayProducts(products) {
         let cardHtml = `
         <div class="col-md-4 mb-4">
             <div class="card">
-            <img src="${product.image}" class="card-img-top" alt="${product.name}">
+            <img class="small-img img-fluid rounded mx-auto d-block" src="${product.image}" class="card-img-top" alt="${product.name}">
             <div class="card-body">
                 <h5 class="card-title">${product.name}</h5>
                 <h3 class="price">${product.price.toFixed(2)}</h3>
