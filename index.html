@@ -11,11 +11,11 @@
       <div class="container-fluid">
         <div class="row flex-nowrap">
             <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
-                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-                    <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                        <span class="fs-5 d-none d-sm-inline">Menu</span>
-                    </a>
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 min-vh-100">
                     <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                        <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                            <span class="fs-5 d-none d-sm-inline">Menu</span>
+                        </a>
                         <li class="nav-item">
                             <a href="/index.html" class="nav-link align-middle px-0">
                                 <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
@@ -32,12 +32,12 @@
                               <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
                               <li class="w-100">
                                   <a href="/HTML/products.html" class="nav-link px-0"> 
-                                    <span class="d-none d-sm-inline">Products</span>
+                                    <span class="d-none d-sm-inline">Products Admin</span>
                                   </a>
                               </li>
                               <li>
                                   <a href="/HTML/order.html" class="nav-link px-0"> 
-                                    <span class="d-none d-sm-inline">Order</span>
+                                    <span class="d-none d-sm-inline">Place Order</span>
                                   </a>
                               </li>
                               <li>
@@ -57,9 +57,17 @@
                     
                 </div>
             </div>
-            <div class="col py-3">
-            <h1>SNEE.CO</h1>
-            <h3>Your home of all things TECH</h3>
+            <div class="col py-3 d-flex flex-column align-items-center m-auto">
+                <h1>SNEE.CO</h1>
+                <h3>DISCOVER THE FUTURE OF COMPUTING WITH US TODAY!</h3>
+                <div class="gap-2">
+                    <button class="btn btn-primary " type="button">
+                        <a class="text-white text-decoration-none" href="/HTML/products.html">Products Admin</a>
+                    </button>
+                    <button class="btn btn-primary" type="button">
+                        <a class="text-white text-decoration-none" href="/HTML/order.html">Place Order</a>
+                    </button>
+                </div>
             </div>
         </div>
     </div>

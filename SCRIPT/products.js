@@ -41,7 +41,7 @@ function displayProductsInTable(products) {
         <td>${product.id}</td>
         <td>${product.name}</td>
         <td>${product.category}</td>
-        <td><img class="small-img img-fluid" src="${product.image}" alt="${product.name}"></td>
+        <td class="w-25"><img class="small-img img-fluid rounded mx-auto d-block w-25" src="${product.image}" alt="${product.name}"></td>
         <td>${product.price.toFixed(2)}</td>
         <td><button class="btn btn-danger btn-sm remove-btn" data-id="${product.id}">Remove</button></td>
         </tr>
