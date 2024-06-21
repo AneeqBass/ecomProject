@@ -8,47 +8,106 @@
     <title>Index</title>
 </head>
 <body>
+    <div id="mobileNav">
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+            <div class="mb-3">
+          <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a href="/" class="d-flex align-items-center text-decoration-none">
+                    <!-- <span class="fs-5 d-none d-sm-inline">Menu</span> -->
+                     <img id="logo" src="https://aneeqbass.github.io/ecommerceImages/logo.png" alt="logo">
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/index.html" class="nav-link align-middle text-white">
+                    <i class="fs-4"></i> <span class="">Home</span>
+                </a>
+              </li>
+              <li>
+                <a href="/HTML/about.html" class="nav-link align-middle text-white">
+                  <i class="fs-4"></i> <span class="">About</span>
+              </a>
+            </li>
+            <li>
+              <a href="#submenu3" data-bs-toggle="collapse" class="nav-link text-white">
+                  <i class="fs-4 bi-grid"></i> <span class="">Sales</span> </a>
+                  <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
+                  <li class="w-100">
+                      <a href="/HTML/products.html" class="nav-link text-white"> 
+                        <span class="">Products Admin</span>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="/HTML/order.html" class="nav-link text-white"> 
+                        <span class="">Place Order</span>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="/HTML/checkout.html" class="nav-link text-white"> 
+                        <span class="">Checkout</span>
+                      </a>
+                  </li>
+              </ul>
+          </li>
+            <li>
+                <a href="/HTML/contact.html" class="nav-link text-white">
+                    <i class="fs-4 bi-people"></i> <span class="">Contact Us</span>
+                </a>
+            </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
       <div class="container-fluid">
-        <div class="row flex-nowrap">
+        <div id="content" class="row flex-nowrap">
+            
             <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
-                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 min-vh-100">
-                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
-                        <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                            <span class="fs-5 d-none d-sm-inline">Menu</span>
+                <div class="d-flex flex-column px-3 pt-2 min-vh-100">
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 " id="menu">
+                        <a href="/" class="d-flex align-items-center text-decoration-none">
+                            <!-- <span class="fs-5 d-none d-sm-inline">Menu</span> -->
+                             <img id="logo" src="https://aneeqbass.github.io/ecommerceImages/logo.png" alt="logo">
                         </a>
                         <li class="nav-item">
-                            <a href="/index.html" class="nav-link align-middle px-0">
-                                <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
+                            <a href="/index.html" class="nav-link align-middle px-0 text-white">
+                                <i class="fs-4"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
                             </a>
                         </li>
                         <li>
-                            <a href="/HTML/about.html" class="nav-link align-middle px-0">
-                              <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">About</span>
+                            <a href="/HTML/about.html" class="nav-link align-middle px-0 text-white">
+                              <i class="fs-4"></i> <span class="ms-1 d-none d-sm-inline">About</span>
                           </a>
                         </li>
                         <li>
-                          <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                          <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle text-white">
                               <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Sales</span> </a>
                               <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
                               <li class="w-100">
-                                  <a href="/HTML/products.html" class="nav-link px-0"> 
+                                  <a href="/HTML/products.html" class="nav-link px-0 text-white"> 
                                     <span class="d-none d-sm-inline">Products Admin</span>
                                   </a>
                               </li>
                               <li>
-                                  <a href="/HTML/order.html" class="nav-link px-0"> 
+                                  <a href="/HTML/order.html" class="nav-link px-0 text-white"> 
                                     <span class="d-none d-sm-inline">Place Order</span>
                                   </a>
                               </li>
                               <li>
-                                  <a href="/HTML/checkout.html" class="nav-link px-0"> 
+                                  <a href="/HTML/checkout.html" class="nav-link px-0 text-white"> 
                                     <span class="d-none d-sm-inline">Checkout</span>
                                   </a>
                               </li>
                           </ul>
                       </li>
                         <li>
-                            <a href="/HTML/contact.html" class="nav-link px-0 align-middle">
+                            <a href="/HTML/contact.html" class="nav-link px-0 align-middle text-white">
                                 <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Contact Us</span>
                             </a>
                         </li>
@@ -57,7 +116,7 @@
                     
                 </div>
             </div>
-            <div class="col py-3 d-flex flex-column align-items-center m-auto">
+            <div class="col py-3 d-flex flex-column align-items-center m-auto text-white bg-transparent with-blur-backdrop">
                 <h1>SNEE.CO</h1>
                 <h3>DISCOVER THE FUTURE OF COMPUTING WITH US TODAY!</h3>
                 <div class="gap-2">
@@ -77,11 +136,45 @@
             <h6> &copy;<b>SNEE.CO</b>|2024| All rights reserved</h6>
          </div>
          <div class="socialLinks">
-            <a href=""><img class="instaLogo" src="" alt=""></a>
-            <a href=""><img class="twitterLogo" src="" alt=""></a>
+            <a href="#"><img class="facebookLogo" src="https://aneeqbass.github.io/ecommerceImages/facebook.png" alt="facebookLogo"></a>
+            <a href="#"><img class="instaLogo" src="https://aneeqbass.github.io/ecommerceImages/instagram.jpg" alt="instaLogo"></a>
          </div>
     </footer>
-
+    <div class="modal fade" id="editProductModal" tabindex="-1" aria-labelledby="editProductModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="editProductModalLabel">Edit Product</h5>
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+            <form id="editProductForm">
+                <input type="hidden" id="editProductId">
+                <div class="mb-3">
+                <label for="editProductName" class="form-label">Product Name</label>
+                <input type="text" class="form-control" id="editProductName" required>
+                </div>
+                <div class="mb-3">
+                <label for="editProductCategory" class="form-label">Category</label>
+                <input type="text" class="form-control" id="editProductCategory" required>
+                </div>
+                <div class="mb-3">
+                <label for="editProductImage" class="form-label">Image URL</label>
+                <input type="url" class="form-control" id="editProductImage" required>
+                </div>
+                <div class="mb-3">
+                <label for="editProductPrice" class="form-label">Price</label>
+                <input type="number" step="0.01" class="form-control" id="editProductPrice" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Save changes</button>
+            </form>
+            </div>
+        </div>
+        </div>
+    </div>
+  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
