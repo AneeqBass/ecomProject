@@ -36,21 +36,26 @@ function getProductsFromLocalStorage() {
 function displayProductsInTable(products) {
     tableBody.innerHTML = '';
     products.forEach(product => {
-        row = `
+        let row = `
          <tr>
         <td>${product.id}</td>
         <td>${product.name}</td>
         <td>${product.category}</td>
-        <td class="w-25"><img class="small-img img-fluid rounded mx-auto d-block w-25" src="${product.image}" alt="${product.name}"></td>
+        <td><img id="productImg" class="small-img img-fluid rounded mx-auto d-block" src="${product.image}" alt="${product.name}"></td>
         <td>${product.price.toFixed(2)}</td>
-        <td><button class="btn btn-danger btn-sm remove-btn" data-id="${product.id}">Remove</button></td>
+        <td>
+          <button class="btn btn-primary btn-sm edit-btn" data-id="${product.id}">Edit</button>
+          <button class="btn btn-danger btn-sm remove-btn" data-id="${product.id}">Remove</button>
+        </td>
         </tr>
         `;
         tableBody.innerHTML += row;
     });
 
-    document.addEventListener('DOMContentLoaded', () => {
-        displayProductsInTable(products);
+    document.querySelectorAll('.edit-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            openEditModal(this.dataset.id);
+        });
     });
 
     document.querySelectorAll('.remove-btn').forEach(button => {
@@ -58,6 +63,18 @@ function displayProductsInTable(products) {
             removeProduct(this.dataset.id);
         });
     });
+}
+
+function openEditModal(id) {
+    const product = products.find(p => p.id == id);
+    if (product) {
+        document.getElementById('editProductId').value = product.id;
+        document.getElementById('editProductName').value = product.name;
+        document.getElementById('editProductCategory').value = product.category;
+        document.getElementById('editProductImage').value = product.image;
+        document.getElementById('editProductPrice').value = product.price;
+        new bootstrap.Modal(document.getElementById('editProductModal')).show();
+    }
 }
 
 function searchProducts(query) {
@@ -141,4 +158,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-    
+
+document.getElementById('editProductForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const id = document.getElementById('editProductId').value;
+    const name = document.getElementById('editProductName').value;
+    const category = document.getElementById('editProductCategory').value;
+    const image = document.getElementById('editProductImage').value;
+    const price = parseFloat(document.getElementById('editProductPrice').value);
+
+    const productIndex = products.findIndex(p => p.id == id);
+    if (productIndex > -1 && name && category && image && !isNaN(price)) {
+        products[productIndex] = new Product(id, name, category, image, price);
+        localStorage.setItem('Products', JSON.stringify(products));
+        displayProductsInTable(products);
+        new bootstrap.Modal(document.getElementById('editProductModal')).hide();
+    } else {
+        alert('Please fill out all fields correctly.');
+    }
+});
