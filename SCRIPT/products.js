@@ -37,6 +37,7 @@ function displayProductsInTable(products) {
     tableBody.innerHTML = '';
     products.forEach(product => {
         let row = `
+        <div id=tableDiv>
          <tr>
         <td>${product.id}</td>
         <td>${product.name}</td>
@@ -48,6 +49,7 @@ function displayProductsInTable(products) {
           <button class="btn btn-danger btn-sm remove-btn" data-id="${product.id}">Remove</button>
         </td>
         </tr>
+        </div>
         `;
         tableBody.innerHTML += row;
     });
