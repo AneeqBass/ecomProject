@@ -124,58 +124,65 @@ function updateCategorySelect() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    displayProductsInTable(products);
-    updateCategorySelect()
-    
-    document.getElementById('searchInput').addEventListener('input', function() {
-        searchProducts(this.value);
-    });
-
-    document.getElementById('categorySelect').addEventListener('change', function() {
-        filterByCategory(this.value);
-    });
-
-    document.getElementById('sortPriceSelect').addEventListener('change', function() {
-        sortProductsByPrice(this.value);
-    });
-
-    addItemButton.addEventListener('click', () => {
-        let id = products.length ? products[products.length - 1].id + 1 : 1;
-        let name = document.getElementById('productName').value;
-        let category = document.getElementById('productCategory').value;
-        let image = document.getElementById('productImage').value;
-        let price = parseFloat(document.getElementById('productPrice').value);
+try {
+    document.addEventListener('DOMContentLoaded', () => {
+        displayProductsInTable(products);
+        updateCategorySelect()
         
-        if (name && category && image && !isNaN(price)) {
-            let newProduct = new Product(id, name, category, image, price);
-            addProduct(newProduct);
-            document.getElementById('productName').value = '';
-            document.getElementById('productCategory').value = '';
-            document.getElementById('productImage').value = '';
-            document.getElementById('productPrice').value = '';
+        document.getElementById('searchInput').addEventListener('input', function() {
+            searchProducts(this.value);
+        });
+    
+        document.getElementById('categorySelect').addEventListener('change', function() {
+            filterByCategory(this.value);
+        });
+    
+        document.getElementById('sortPriceSelect').addEventListener('change', function() {
+            sortProductsByPrice(this.value);
+        });
+    
+        addItemButton.addEventListener('click', () => {
+            let id = products.length ? products[products.length - 1].id + 1 : 1;
+            let name = document.getElementById('productName').value;
+            let category = document.getElementById('productCategory').value;
+            let image = document.getElementById('productImage').value;
+            let price = parseFloat(document.getElementById('productPrice').value);
+            
+            if (name && category && image && !isNaN(price)) {
+                let newProduct = new Product(id, name, category, image, price);
+                addProduct(newProduct);
+                document.getElementById('productName').value = '';
+                document.getElementById('productCategory').value = '';
+                document.getElementById('productImage').value = '';
+                document.getElementById('productPrice').value = '';
+            } else {
+                alert('Please fill out all fields correctly.');
+            }
+        });
+    });
+} catch (error) {
+    alert(`${error}`)
+}
+
+try {
+    document.getElementById('editProductForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const id = document.getElementById('editProductId').value;
+        const name = document.getElementById('editProductName').value;
+        const category = document.getElementById('editProductCategory').value;
+        const image = document.getElementById('editProductImage').value;
+        const price = parseFloat(document.getElementById('editProductPrice').value);
+    
+        const productIndex = products.findIndex(p => p.id == id);
+        if (productIndex > -1 && name && category && image && !isNaN(price)) {
+            products[productIndex] = new Product(id, name, category, image, price);
+            localStorage.setItem('Products', JSON.stringify(products));
+            displayProductsInTable(products);
+            new bootstrap.Modal(document.getElementById('editProductModal')).hide();
         } else {
             alert('Please fill out all fields correctly.');
         }
     });
-});
-
-
-document.getElementById('editProductForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const id = document.getElementById('editProductId').value;
-    const name = document.getElementById('editProductName').value;
-    const category = document.getElementById('editProductCategory').value;
-    const image = document.getElementById('editProductImage').value;
-    const price = parseFloat(document.getElementById('editProductPrice').value);
-
-    const productIndex = products.findIndex(p => p.id == id);
-    if (productIndex > -1 && name && category && image && !isNaN(price)) {
-        products[productIndex] = new Product(id, name, category, image, price);
-        localStorage.setItem('Products', JSON.stringify(products));
-        displayProductsInTable(products);
-        new bootstrap.Modal(document.getElementById('editProductModal')).hide();
-    } else {
-        alert('Please fill out all fields correctly.');
-    }
-});
+} catch (error) {
+    alert(`${error}`)
+}
