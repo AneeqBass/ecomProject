@@ -1,5 +1,9 @@
+*{
+    -webkit-text-stroke: 0.3px black;
+}
 html{
     background-color: #28242c;
+    color: #28242c;
 }
 #menu {
     margin-top: 20px;
@@ -42,7 +46,8 @@ footer {
 #content{
     background-image: url("https://aneeqbass.github.io/ecommerceImages/compBG.jpg");
     background-position: center;
-    
+    background-size: cover;
+    background-attachment: fixed;
 }
 #tableDiv{
     max-width: 100%;
