@@ -10,6 +10,7 @@ function populateCart() {
 
     cart.forEach(product => {
         cartContent +=`
+        <div id=tableDiv>
          <tr>
         <td>${product.id}</td>
         <td>${product.name}</td>
@@ -18,6 +19,7 @@ function populateCart() {
         <td>${product.price.toFixed(2)}</td>
         <td><button class="btn btn-danger btn-sm remove-btn" data-id="${product.id}">Remove</button></td>
         </tr>
+        </div>
         `;
         totalPrice += product.price
     });
